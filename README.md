@@ -14,4 +14,4 @@ yield return new ExecuteForSeconds
 	);
 ```
 
-_Note: If you cache an instance of ExecuteForSeconds you'll likely need to call Reset() (or one of its overloads) before using it again._
+_Note: If you cache an instance of ExecuteForSeconds you'll likely need to call Reset() before using it again._
