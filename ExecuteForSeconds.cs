@@ -9,9 +9,7 @@ public class ExecuteForSeconds : CustomYieldInstruction
 
     public ExecuteForSeconds(float duration, System.Action<float> apply)
     {
-        _apply = apply;
-        _duration = duration;
-        Reset();
+        Reset(duration, apply);
     }
 
     public override bool keepWaiting
@@ -30,5 +28,24 @@ public class ExecuteForSeconds : CustomYieldInstruction
     {
         _timer = 0;
         base.Reset();
+    }
+
+    public void Reset(float newDuration)
+    {
+        _duration = newDuration;
+        Reset();
+    }
+
+    public void Reset(System.Action<float> newApply)
+    {
+        _apply = newApply;
+        Reset();
+    }
+
+    public void Reset(float newDuration, System.Action<float> newApply)
+    {
+        _apply = newApply;
+        _duration = newDuration;
+        Reset();
     }
 }
