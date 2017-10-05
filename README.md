@@ -22,9 +22,9 @@ Yield until supplied Func returns false.
 Usage:
 ```
 yield return new WaitForFunc
-            (
-                () => { return Time.timeSinceLevelLoad > 10; }
-            );
+    (
+	() => { return Time.timeSinceLevelLoad > 10; }
+    );
 ```
 
 
